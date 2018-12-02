@@ -1,0 +1,61 @@
+homeassistant:
+  name: Home
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  elevation: !secret home_alt
+  unit_system: metric
+  time_zone: Europe/Prague
+
+frontend:
+
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+  include_used_components: true
+
+discovery:
+  ignore:
+  - google_cast
+
+conversation:
+
+history:
+  exclude:
+    domains:
+    - automation
+    - script
+
+logbook:
+
+sun:
+
+sensor:
+  platform: yr
+
+tts:
+  platform: google
+
+group: !include groups.yaml
+
+homekit:
+  # nepovinné - pouze pokud provozuje více HomeAssistentů
+  name: Homekit Bridge
+
+switch:
+    - platform: mqtt
+      name: Stolni lampicka
+      state_topic: "stat/sonoff/RESULT"
+      value_template: '{{ value_json["POWER1"] }}'
+      command_topic: "cmnd/sonoff/POWER"
+      availability_topic: "tele/sonoff/LWT"
+      payload_on: "ON"
+      payload_off: "OFF"
+      payload_available: "Aktivní"
+      payload_not_available: "Neaktivní"

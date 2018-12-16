@@ -1,0 +1,27 @@
+light.room1_table_lamp:
+  friendly_name: "Stolní lampička"
+  icon: mdi:lamp
+
+sensor.room1_table_lamp_energy_voltage:
+  friendly_name: "Napětí"
+  icon: mdi-power-plug
+
+sensor.room1_table_lamp_energy_power:
+  friendly_name: "Příkon"
+  icon: mdi-power-plug
+
+sensor.room1_table_lamp_energy_current:
+  friendly_name: "Proud"
+  icon: mdi-power-plug
+
+sensor.room1_table_lamp_energy_today:
+  friendly_name: "Spotřeba dnes"
+  icon: mdi-battery-charging
+
+sensor.room1_table_lamp_energy_yesterday:
+  friendly_name: "Spotřeba včera"
+  icon: mdi-battery-charging
+
+sensor.room1_table_lamp_energy_total:
+  friendly_name: "Celková spotřeba"
+  icon: mdi-battery-charging

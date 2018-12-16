@@ -5,6 +5,7 @@ homeassistant:
   elevation: !secret home_alt
   unit_system: metric
   time_zone: Europe/Prague
+  customize: !include customize.yaml
 
 frontend:
 
@@ -37,7 +38,38 @@ logbook:
 sun:
 
 sensor:
-  platform: yr
+    - platform: yr
+    
+    - platform: mqtt
+      name: "room1_table_lamp_energy_today"
+      state_topic: "tele/sonoff/SENSOR"
+      value_template: ' {{ value_json["ENERGY"]["Today"] }}'
+      unit_of_measurement: "kWh"
+    - platform: mqtt
+      name: "room1_table_lamp_energy_yesterday"
+      state_topic: "tele/sonoff/SENSOR"
+      value_template: ' {{ value_json["ENERGY"]["Yesterday"] }}'
+      unit_of_measurement: "kWh"
+    - platform: mqtt
+      name: "room1_table_lamp_energy_total"
+      state_topic: "tele/sonoff/SENSOR"
+      value_template: ' {{ value_json["ENERGY"]["Total"] }}'
+      unit_of_measurement: "kWh"
+    - platform: mqtt
+      name: "room1_table_lamp_energy_power"
+      state_topic: "tele/sonoff/SENSOR"
+      value_template: ' {{ value_json["ENERGY"]["Power"] }}'
+      unit_of_measurement: "W"
+    - platform: mqtt
+      name: "room1_table_lamp_energy_voltage"
+      state_topic: "tele/sonoff/SENSOR"
+      value_template: ' {{ value_json["ENERGY"]["Voltage"] }}'
+      unit_of_measurement: "V"
+    - platform: mqtt
+      name: "room1_table_lamp_energy_current"
+      state_topic: "tele/sonoff/SENSOR"
+      value_template: ' {{ value_json["ENERGY"]["Current"] }}'
+      unit_of_measurement: "A"
 
 tts:
   platform: google
@@ -48,14 +80,15 @@ homekit:
   # nepovinné - pouze pokud provozuje více HomeAssistentů
   name: Homekit Bridge
 
-switch:
+light:
     - platform: mqtt
-      name: Stolni lampicka
-      state_topic: "stat/sonoff/RESULT"
-      value_template: '{{ value_json["POWER1"] }}'
+      name: "room1_table_lamp"
+      state_topic: "stat/sonoff/POWER"    
       command_topic: "cmnd/sonoff/POWER"
       availability_topic: "tele/sonoff/LWT"
+      qos: 1
       payload_on: "ON"
       payload_off: "OFF"
       payload_available: "Aktivní"
       payload_not_available: "Neaktivní"
+      retain: false

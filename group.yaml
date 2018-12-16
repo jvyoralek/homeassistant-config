@@ -1,0 +1,11 @@
+sonoff:
+  name: "Lampička"
+  control: hidden
+  entities:
+    - light.room1_table_lamp
+    - sensor.room1_table_lamp_energy_voltage
+    - sensor.room1_table_lamp_energy_power
+    - sensor.room1_table_lamp_energy_current
+    - sensor.room1_table_lamp_energy_today
+    - sensor.room1_table_lamp_energy_yesterday
+    - sensor.room1_table_lamp_energy_total

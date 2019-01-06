@@ -25,3 +25,18 @@ sensor.room1_table_lamp_energy_yesterday:
 sensor.room1_table_lamp_energy_total:
   friendly_name: "Celková spotřeba"
   icon: mdi-battery-charging
+
+sensor.room1_table_bme280_temp:
+  friendly_name: "Teplota"
+
+sensor.room1_table_bme280_humid:
+  friendly_name: "Vlhkost"  
+
+sensor.room1_table_bme280_pressure:
+  friendly_name: "Tlak" 
+
+sensor.room1_table_sht31_temp:
+  friendly_name: "Teplota"
+
+sensor.room1_table_sht31_humid:
+  friendly_name: "Vlhkost"  

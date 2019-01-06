@@ -71,6 +71,37 @@ sensor:
       value_template: ' {{ value_json["ENERGY"]["Current"] }}'
       unit_of_measurement: "A"
 
+    - platform: mqtt
+      name: "room1_table_bme280_temp"
+      state_topic: "tele/wemos-d1-mini/SENSOR"
+      value_template: ' {{ value_json["BME280"]["Temperature"] }}'
+      unit_of_measurement: "°C"
+      device_class: temperature
+    - platform: mqtt
+      name: "room1_table_bme280_humid"
+      state_topic: "tele/wemos-d1-mini/SENSOR"
+      value_template: ' {{ value_json["BME280"]["Humidity"] }}'
+      unit_of_measurement: "%"
+      device_class: humidity
+    - platform: mqtt
+      name: "room1_table_bme280_pressure"
+      state_topic: "tele/wemos-d1-mini/SENSOR"
+      value_template: ' {{ value_json["BME280"]["Pressure"] }}'
+      unit_of_measurement: "hPa"
+      device_class: pressure
+    - platform: mqtt
+      name: "room1_table_sht31_temp"
+      state_topic: "tele/wemos-d1-mini/SENSOR"
+      value_template: ' {{ value_json["SHT3X-0x44"]["Temperature"] }}'
+      unit_of_measurement: "°C"
+      device_class: temperature
+    - platform: mqtt
+      name: "room1_table_sht31_humid"
+      state_topic: "tele/wemos-d1-mini/SENSOR"
+      value_template: ' {{ value_json["SHT3X-0x44"]["Humidity"] }}'
+      unit_of_measurement: "%"
+      device_class: humidity      
+
 tts:
   platform: google
 

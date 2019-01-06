@@ -9,3 +9,19 @@ sonoff:
     - sensor.room1_table_lamp_energy_today
     - sensor.room1_table_lamp_energy_yesterday
     - sensor.room1_table_lamp_energy_total
+
+bme280:
+  name: "BME280"    
+  control: hidden
+  entities:
+    - sensor.room1_table_bme280_temp
+    - sensor.room1_table_bme280_humid
+    - sensor.room1_table_bme280_pressure
+
+sht31:
+  name: "SHT31"    
+  control: hidden
+  entities:
+    - sensor.room1_table_sht31_temp
+    - sensor.room1_table_sht31_humid
+  

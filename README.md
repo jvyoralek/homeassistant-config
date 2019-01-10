@@ -1,15 +1,17 @@
 # HomeAssistant konfigurace
 
-V tomto repozitáři můžete najít konfigurační soubory pro HomeAssistent (Hass.io), které jsem použil v seriálu na mém blogu.
+V tomto repozitáři můžete najít konfigurační soubory pro [Home Assistant](https://home-assistant.io/) (Hass.io), které jsem použil v seriálu na mém [blogu](https://blog.vyoralek.cz).
+
+Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi.org/OrangePiZeroPlus2) v dockeru na operačním systému Ubuntu 18.04 LTS. Kompletní návod je v [první části](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-1-cast/) seriálu.
 
 ## Konfigurační soubory
 
-- configuration.yaml
-- customize.yaml
-- security.yaml
-- group.yaml
+- [configuration.yaml](configuration.yaml) - hlavní konfigurační soubor
+- [customize.yaml](customize.yaml) - přejmenovávání a ikonky pro uživatelské rozhraní
+- security.yaml - není obsažen v tomto repozitáři. Zde ukládejte své hesla a vaše soukromé nastavení
+- [group.yaml](security.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
 
-## Články popisující konfiguraci
+## Seriál článků na blogu popisující konfiguraci
 
 ### 1. [Instalace](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-1-cast/) HomeAssistant
 
@@ -37,7 +39,7 @@ homekit:
   name: Homekit Bridge
 ```
 
-### 4. [Integrace s produkty Sonoff - 2. část](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-4-cast-integrace-sonoff-2//) 
+### 4. [Integrace s produkty Sonoff - 2. část](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-4-cast-integrace-sonoff-2//)
 
 #### Definice sensorů
 
@@ -77,36 +79,4 @@ light.room1_table_lamp:
 
 ### 5. [Integrace s Wemos D1 Mini a sensory BME280 a SHT31](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-5-cast-wemos-d1-bme280-a-sht31/)
 
-#### Definice sensorů
-
-```yaml
-- platform: mqtt
-  name: "room1_table_bme280_temp"
-  state_topic: "tele/wemos-d1-mini/SENSOR"
-  value_template: ' {{ value_json["BME280"]["Temperature"] }}'
-  unit_of_measurement: "°C"
-  device_class: temperature
-...
-```
-
-#### Seskupování
-
-```yaml
-bme280:
-  name: "BME280"
-  control: hidden
-  entities:
-    - sensor.room1_table_bme280_temp
-    - sensor.room1_table_bme280_humid
-    - sensor.room1_table_bme280_pressure
-...
-```
-
-#### Úprava vzhledu - názvy
-
-```yaml
-sensor.room1_table_bme280_temp:
-  friendly_name: "Teplota"
-...
-...
-```
+Stejný způsob definice, seskupování a úpravy vzhledu senzorů jako v přechozí 4. části.

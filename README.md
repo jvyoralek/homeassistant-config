@@ -16,7 +16,7 @@ Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi
 - [configuration.yaml](home-assistant/configuration.yaml) - hlavní konfigurační soubor
 - [customize.yaml](home-assistant/customize.yaml) - přejmenovávání a ikonky pro uživatelské rozhraní
 - security.yaml - není obsažen v tomto repozitáři. Zde ukládejte své hesla a vaše soukromé nastavení
-- [group.yaml](home-assistant/security.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
+- [group.yaml](home-assistant/group.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
 
 ### EspHome
 

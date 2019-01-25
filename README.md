@@ -1,15 +1,26 @@
-# HomeAssistant konfigurace
+# HomeAssistant + ESPHome konfigurace
 
 V tomto repozitáři můžete najít konfigurační soubory pro [Home Assistant](https://home-assistant.io/) (Hass.io), které jsem použil v seriálu na mém [blogu](https://blog.vyoralek.cz).
+
+Jako integrační platformy používám:
+
+- [Sonoff-Tasmota](https://github.com/arendst/Sonoff-Tasmota) - napojení na HomeAssistant pomocí prostředníka MQTT. Velká množina podporovaných produktů zejména od firmy Sonoff.
+- [ESPHome](https://esphomelib.com/esphomeyaml/index.html) - přímé napojení na HomeAssistant. Zatím chudší dokumentace a příklady.
 
 Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi.org/OrangePiZeroPlus2) v dockeru na operačním systému Ubuntu 18.04 LTS. Kompletní návod je v [první části](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-1-cast/) seriálu.
 
 ## Konfigurační soubory
 
-- [configuration.yaml](configuration.yaml) - hlavní konfigurační soubor
-- [customize.yaml](customize.yaml) - přejmenovávání a ikonky pro uživatelské rozhraní
+### HomeAsisstant
+
+- [configuration.yaml](home-assistant/configuration.yaml) - hlavní konfigurační soubor
+- [customize.yaml](home-assistant/customize.yaml) - přejmenovávání a ikonky pro uživatelské rozhraní
 - security.yaml - není obsažen v tomto repozitáři. Zde ukládejte své hesla a vaše soukromé nastavení
-- [group.yaml](security.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
+- [group.yaml](home-assistant/security.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
+
+### EspHome
+
+- TBD
 
 ## Seriál článků na blogu popisující konfiguraci
 

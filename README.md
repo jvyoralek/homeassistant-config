@@ -20,7 +20,8 @@ Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi
 
 ### EspHome
 
-- TBD
+- [Sonoff Basic](esphome/sonoff-basic.yaml)
+- [Sonoff S20](esphome/sonoff-s20.yaml)
 
 ## Seriál článků na blogu popisující konfiguraci
 

@@ -24,4 +24,15 @@ sht31:
   entities:
     - sensor.room1_table_sht31_temp
     - sensor.room1_table_sht31_humid
+
+s20:
+  name: "Sonoff S20"
+  control: hidden
+  entities:
+    - binary_sensor.sonoff_s20_stav
+    - binary_sensor.sonoff_s20_tlaciko
+    - sensor.sonoff_s20_doba_behu
+    - sensor.sonoff_s20_verze
+    - sensor.sonoff_s20_wifi_signal
+    - switch.sonoff_s20_prepinac
   

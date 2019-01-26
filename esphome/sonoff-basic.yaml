@@ -1,0 +1,55 @@
+esphomeyaml:
+  name: sonoff_basic
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout
+
+wifi:
+  ssid: 'wifi'
+  password: 'wifi_heslo'
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    id: button
+    device_class: light
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - switch.toggle: fakebutton
+
+switch:
+  - platform: template
+    name: "Sonoff Basic přepínač"
+    optimistic: true
+    id: fakebutton
+    turn_on_action:
+    - switch.turn_on: relay
+    - light.turn_on: led
+    turn_off_action:
+    - switch.turn_off: relay
+    - light.turn_off: led
+  - platform: gpio
+    id: relay
+    pin: GPIO12
+
+output:
+  - platform: esp8266_pwm
+    id: basic_green_led
+    pin:
+      number: GPIO13
+      inverted: True
+
+light:
+  - platform: monochromatic
+    output: basic_green_led 
+    id: led

@@ -91,3 +91,12 @@ light.room1_table_lamp:
 ### 5. [Integrace s Wemos D1 Mini a sensory BME280 a SHT31](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-5-cast-wemos-d1-bme280-a-sht31/)
 
 Stejný způsob definice, seskupování a úpravy vzhledu senzorů jako v přechozí 4. části.
+
+### 6. [Integrace se Sonoff produkty pomocí ESPHome](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-5-cast-sonoff-esphome/)
+
+#### ESPHome konfigurační soubory
+
+- Sonoff Basic - [konfigurace](esphome/sonoff-basic.yaml)
+- Sonoff S20 - [konfigurace](esphome/sonoff-s20.yaml)
+
+Seskupování v HomeAssistentovi jako v části 4 a 5.

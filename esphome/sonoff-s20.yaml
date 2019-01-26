@@ -1,0 +1,46 @@
+esphomeyaml:
+  name: sonoff_basic
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout
+
+wifi:
+  ssid: 'wifi'
+  password: 'wifi_heslo'
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+- platform: gpio
+  pin:
+    number: GPIO0
+    mode: INPUT_PULLUP
+    inverted: True
+  name: "Sonoff S20 Tlačítko"
+  on_press:
+    - switch.toggle: relay
+- platform: status
+  name: "Sonoff S20 Stav"
+
+switch:
+- platform: gpio
+  name: "Sonoff S20 Přepínač"
+  pin: GPIO12
+  id: relay
+
+text_sensor:
+  - platform: version
+    name: "Sonoff S20 Verze"
+    
+sensor:
+  - platform: wifi_signal
+    name: "Sonoff S20 WiFi signál"
+    update_interval: 60s    
+  - platform: uptime
+    name: "Sonoff S20 Doba běhu"

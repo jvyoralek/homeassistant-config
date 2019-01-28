@@ -1,0 +1,99 @@
+esphomeyaml:
+  name: pow
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout
+
+wifi:
+  ssid: 'wifi'
+  password: 'wifi_heslo'
+
+# Enable logging
+logger:
+  baud_rate: 0
+
+uart:
+  rx_pin: RX
+  baud_rate: 4800
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    id: button
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - switch.toggle: fakebutton
+  - platform: template
+    name: "Pračka pere"
+    filters:
+      - delayed_off: 15s
+    lambda: |-
+      if (isnan(id(power).state)) {
+        return {};
+      } else if (id(power).state > 2) {
+        // Running
+        return true;
+      } else {
+        // Not running
+        return false;
+      }
+switch:
+  - platform: template
+    name: "Sonoff POW Přepínač"
+    optimistic: true
+    id: fakebutton
+    turn_on_action:
+    - switch.turn_on: relay
+    - light.turn_on: led
+    turn_off_action:
+    - switch.turn_off: relay
+    - light.turn_off: led
+  - platform: gpio
+    id: relay
+    pin: GPIO12
+
+output:
+  - platform: esp8266_pwm
+    id: pow_blue_led
+    pin:
+      number: GPIO13
+      inverted: True
+
+light:
+  - platform: monochromatic
+    output: pow_blue_led
+    id: led
+
+sensor:
+  - platform: wifi_signal
+    name: "Sonoff POW WiFi Signál"
+    update_interval: 60s
+  - platform: uptime
+    name: "Sonoff POW Doba běhu"
+  - platform: cse7766
+    update_interval: 2s
+    current:
+      name: "Sonoff POW Proud"
+    voltage:
+      name: "Sonoff POW Napětí"
+    power:
+      name: "Sonoff POW Příkon"
+      id: power
+      on_value_range:
+        - above: 2.0
+          then:
+            - light.turn_on: led
+        - below: 1.0
+          then:
+            - light.turn_off: led
+
+text_sensor:
+  - platform: version
+    name: "Sonoff POW Verze"

@@ -11,7 +11,7 @@ sonoff:
     - sensor.room1_table_lamp_energy_total
 
 bme280:
-  name: "BME280"    
+  name: "BME280"
   control: hidden
   entities:
     - sensor.room1_table_bme280_temp
@@ -19,7 +19,7 @@ bme280:
     - sensor.room1_table_bme280_pressure
 
 sht31:
-  name: "SHT31"    
+  name: "SHT31"
   control: hidden
   entities:
     - sensor.room1_table_sht31_temp
@@ -35,4 +35,16 @@ s20:
     - sensor.sonoff_s20_verze
     - sensor.sonoff_s20_wifi_signal
     - switch.sonoff_s20_prepinac
-  
+
+pow:
+  name: "Pračka"
+  control: hidden
+  entities:
+    - binary_sensor.pracka_pere
+    - switch.sonoff_pow_prepinac
+    - sensor.sonoff_pow_napeti
+    - sensor.sonoff_pow_prikon
+    - sensor.sonoff_pow_proud
+    - sensor.sonoff_pow_verze
+    - sensor.sonoff_pow_doba_behu
+    - sensor.sonoff_pow_wifi_signal

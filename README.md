@@ -11,17 +11,18 @@ Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi
 
 ## Konfigurační soubory
 
-### HomeAsisstant
+### HomeAsisstant (Hass.Io)
 
 - [configuration.yaml](home-assistant/configuration.yaml) - hlavní konfigurační soubor
 - [customize.yaml](home-assistant/customize.yaml) - přejmenovávání a ikonky pro uživatelské rozhraní
 - security.yaml - není obsažen v tomto repozitáři. Zde ukládejte své hesla a vaše soukromé nastavení
 - [group.yaml](home-assistant/group.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
 
-### EspHome
+### EspHome (ESP2866/ESP32)
 
-- [Sonoff Basic](esphome/sonoff-basic.yaml)
-- [Sonoff S20](esphome/sonoff-s20.yaml)
+- [Sonoff Basic](esphome/sonoff-basic.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bGYrG1Bi))
+- [Sonoff S20](esphome/sonoff-s20.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/cFMbMdra) nebo novější model S26 na [AliExpressu](http://s.click.aliexpress.com/e/2rfAqFa))
+- [Sonoff POW R2](esphome/sonoff-pow-r2.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/eqTCSpS))
 
 ## Seriál článků na blogu popisující konfiguraci
 
@@ -101,3 +102,7 @@ Stejný způsob definice, seskupování a úpravy vzhledu senzorů jako v přech
 - Sonoff S20 - [konfigurace](esphome/sonoff-s20.yaml)
 
 Seskupování v HomeAssistentovi jako v části 4 a 5.
+
+### 7. [Integrace se Sonoff produkty pomocí ESPHome 2] -TBD
+
+- Sonoff POW R2 - [konfigurace](esphome/sonoff-pow-r2.yaml)

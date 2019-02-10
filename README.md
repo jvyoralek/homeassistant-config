@@ -103,6 +103,8 @@ Stejný způsob definice, seskupování a úpravy vzhledu senzorů jako v přech
 
 Seskupování v HomeAssistentovi jako v části 4 a 5.
 
-### 7. [Integrace se Sonoff produkty pomocí ESPHome 2] -TBD
+### 7. [Integrace se Sonoff produkty pomocí ESPHome 2](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-7-cast-sonoff-pow-esphome/)
 
 - Sonoff POW R2 - [konfigurace](esphome/sonoff-pow-r2.yaml)
+
+Seskupování v HomeAssistentovi jako v části 4 a 5.

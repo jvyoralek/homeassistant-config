@@ -22,6 +22,7 @@ Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi
 
 - [Sonoff Basic](esphome/sonoff-basic.yaml)
 - [Sonoff S20](esphome/sonoff-s20.yaml)
+- [Sonoff TH10](esphome/sonoff-th10.yaml) (se sensorem DS18B20)
 
 ## Seriál článků na blogu popisující konfiguraci
 
@@ -99,5 +100,6 @@ Stejný způsob definice, seskupování a úpravy vzhledu senzorů jako v přech
 
 - Sonoff Basic - [konfigurace](esphome/sonoff-basic.yaml)
 - Sonoff S20 - [konfigurace](esphome/sonoff-s20.yaml)
+- Sonoff TH10 - [konfigurace](esphome/sonoff-th10.yaml)
 
 Seskupování v HomeAssistentovi jako v části 4 a 5.

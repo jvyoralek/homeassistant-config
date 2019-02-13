@@ -35,4 +35,12 @@ s20:
     - sensor.sonoff_s20_verze
     - sensor.sonoff_s20_wifi_signal
     - switch.sonoff_s20_prepinac
-  
+
+th10:
+  name: "Sonoff TH10"
+  control: hidden
+  entities:
+    - binary_sensor.sonoff_th10_stav
+    - binary_sensor.sonoff_th10_tlacitko
+    - sensor.sonoff_th10_teplota
+    - switch.sonoff_th10_prepinac

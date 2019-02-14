@@ -1,0 +1,38 @@
+esphomeyaml:
+  name: magichome_led_rgbw
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: 'wifi'
+  password: 'wifi_heslo'
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+light:
+  - platform: rgbw
+    name: "LED pasek stul"
+    red: out_red
+    green: out_green
+    blue: out_blue
+    white: out_white
+    
+output:
+  - platform: esp8266_pwm
+    pin: GPIO12
+    id: out_red
+  - platform: esp8266_pwm
+    pin: GPIO05
+    id: out_green 
+  - platform: esp8266_pwm
+    pin: GPIO13
+    id: out_blue
+  - platform: esp8266_pwm
+    pin: GPIO15
+    id: out_white  

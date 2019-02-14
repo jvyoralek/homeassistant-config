@@ -5,7 +5,7 @@ V tomto repozitáři můžete najít konfigurační soubory pro [Home Assistant]
 Jako integrační platformy používám:
 
 - [Sonoff-Tasmota](https://github.com/arendst/Sonoff-Tasmota) - napojení na HomeAssistant pomocí prostředníka MQTT. Velká množina podporovaných produktů zejména od firmy Sonoff.
-- [ESPHome](https://esphomelib.com/esphomeyaml/index.html) - přímé napojení na HomeAssistant. Zatím chudší dokumentace a příklady.
+- [ESPHome](https://esphome.io/) - přímé napojení na HomeAssistant. Zatím chudší dokumentace a příklady.
 
 Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi.org/OrangePiZeroPlus2) v dockeru na operačním systému Ubuntu 18.04 LTS. Kompletní návod je v [první části](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-1-cast/) seriálu.
 

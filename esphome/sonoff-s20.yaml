@@ -1,4 +1,4 @@
-esphomeyaml:
+esphome:
   name: sonoff_basic
   platform: ESP8266
   board: esp01_1m
@@ -33,6 +33,17 @@ switch:
   name: "Sonoff S20 Přepínač"
   pin: GPIO12
   id: relay
+
+output:
+  - platform: esp8266_pwm
+    id: s20_green_led
+    pin: GPIO13
+    inverted: True
+
+light:
+  - platform: monochromatic
+    name: "Sonoff S20 Zelená LEDka"
+    output: s20_green_led    
 
 text_sensor:
   - platform: version

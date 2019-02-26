@@ -112,6 +112,6 @@ Seskupování v HomeAssistentovi jako v části 4 a 5.
 
 Seskupování v HomeAssistentovi jako v části 4 a 5.
 
-### 8. [Integrace se LED ovladačem MagicHome pomocí ESPHome](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-8-cast-led-esphome/)
+### 8. [Integrace s LED ovladačem MagicHome pomocí ESPHome](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-8-cast-led-esphome/)
 
 - Magic Home LED controller - [konfigurace](esphome/magichome-led-rgbw.yaml)

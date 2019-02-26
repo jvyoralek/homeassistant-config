@@ -1,4 +1,4 @@
-esphomeyaml:
+esphome:
   name: sonoff_th10
   platform: ESP8266
   board: esp01_1m

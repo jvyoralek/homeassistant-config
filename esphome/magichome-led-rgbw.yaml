@@ -1,4 +1,4 @@
-esphomeyaml:
+esphome:
   name: magichome_led_rgbw
   platform: ESP8266
   board: esp01_1m

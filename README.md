@@ -24,6 +24,7 @@ Home-Assistant mám nainstalovaný na [Orange Pi Zero Plus2](http://www.orangepi
 - [Sonoff S20](esphome/sonoff-s20.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/cFMbMdra) nebo novější model S26 na [AliExpressu](http://s.click.aliexpress.com/e/2rfAqFa))
 - [Sonoff TH10](esphome/sonoff-th10.yaml) (se sensorem DS18B20, k dostání na [AliExpressu](http://s.click.aliexpress.com/e/SR7soQU)
 - [Sonoff POW R2](esphome/sonoff-pow-r2.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/eqTCSpS))
+- [ZINUO Magic Home RGBW](esphome/magichome-led-rgbw.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/c7R7uLXE))
 
 ## Seriál článků na blogu popisující konfiguraci
 
@@ -110,3 +111,7 @@ Seskupování v HomeAssistentovi jako v části 4 a 5.
 - Sonoff POW R2 - [konfigurace](esphome/sonoff-pow-r2.yaml)
 
 Seskupování v HomeAssistentovi jako v části 4 a 5.
+
+### 8. [Integrace se LED ovladačem MagicHome pomocí ESPHome](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-8-cast-led-esphome/)
+
+- Magic Home LED controller - [konfigurace](esphome/magichome-led-rgbw.yaml)

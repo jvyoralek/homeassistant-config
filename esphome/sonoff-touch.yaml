@@ -34,3 +34,6 @@ light:
     id: light
     name: "Sonoff Touch"
     output: relay
+
+status_led:
+  pin: GPIO13    

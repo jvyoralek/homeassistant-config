@@ -48,33 +48,27 @@ binary_sensor:
     on_press:
       - switch.toggle: relay4      
   - platform: status
-    name: "Sonoff 4CH Status"
+    name: "Sonoff 4CH Stav"
 
 switch:
   - platform: gpio
     id: relay1
-    name: "Sonoff 4CH Relay 1"
+    name: "Sonoff 4CH Spínač 1"
     pin: GPIO12
   - platform: gpio
     id: relay2
-    name: "Sonoff 4CH Relay 2"
+    name: "Sonoff 4CH Spínač 2"
     pin: GPIO5
   - platform: gpio
     id: relay3    
-    name: "Sonoff 4CH Relay 3"
+    name: "Sonoff 4CH Spínač 3"
     pin: GPIO4
   - platform: gpio
     id: relay4
-    name: "Sonoff 4CH Relay 4"
+    name: "Sonoff 4CH Spínač 4"
     pin: GPIO15
 
-output:
-  - platform: esp8266_pwm
-    id: blue_led
-    pin: GPIO13
-    inverted: True
-
-light:
-  - platform: monochromatic
-    name: "Sonoff 4CH Blue LED"
-    output: blue_led
+status_led:
+  pin: 
+    number: GPIO13
+    inverted: True    

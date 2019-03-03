@@ -1,0 +1,80 @@
+esphome:
+  name: sonoff_4ch_01
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout  
+
+wifi:
+  ssid: '<wifi_nazev>'
+  password: '<wifi_heslo>'
+
+logger:
+
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    id: button1
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - switch.toggle: relay1      
+  - platform: gpio
+    id: button2
+    pin:
+      number: GPIO9
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - switch.toggle: relay2      
+  - platform: gpio
+    id: button3
+    pin:
+      number: GPIO10
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - switch.toggle: relay3      
+  - platform: gpio
+    id: button4
+    pin:
+      number: GPIO14
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - switch.toggle: relay4      
+  - platform: status
+    name: "Sonoff 4CH Status"
+
+switch:
+  - platform: gpio
+    id: relay1
+    name: "Sonoff 4CH Relay 1"
+    pin: GPIO12
+  - platform: gpio
+    id: relay2
+    name: "Sonoff 4CH Relay 2"
+    pin: GPIO5
+  - platform: gpio
+    id: relay3    
+    name: "Sonoff 4CH Relay 3"
+    pin: GPIO4
+  - platform: gpio
+    id: relay4
+    name: "Sonoff 4CH Relay 4"
+    pin: GPIO15
+
+output:
+  - platform: esp8266_pwm
+    id: blue_led
+    pin: GPIO13
+    inverted: True
+
+light:
+  - platform: monochromatic
+    name: "Sonoff 4CH Blue LED"
+    output: blue_led

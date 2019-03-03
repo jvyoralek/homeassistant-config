@@ -25,6 +25,7 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 - [Sonoff TH10](esphome/sonoff-th10.yaml) (se sensorem DS18B20, k dostání na [AliExpressu](http://s.click.aliexpress.com/e/SR7soQU)
 - [Sonoff POW R2](esphome/sonoff-pow-r2.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/eqTCSpS))
 - [Sonoff Touch](esphome/sonoff-touch.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/cMT8oOFI))
+- [Sonoff 4ch](esphome/sonoff-4ch.yaml) (k dostatní na [AliExpressu](http://s.click.aliexpress.com/e/zh7pyOy))
 - [ZINUO Magic Home RGBW](esphome/magichome-led-rgbw.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/c7R7uLXE))
 
 ## Seriál článků na blogu popisující konfiguraci
@@ -104,6 +105,8 @@ Stejný způsob definice, seskupování a úpravy vzhledu senzorů jako v přech
 - Sonoff Basic - [konfigurace](esphome/sonoff-basic.yaml)
 - Sonoff S20 - [konfigurace](esphome/sonoff-s20.yaml)
 - Sonoff TH10 - [konfigurace](esphome/sonoff-th10.yaml)
+- Sonoff Touch - [konfigurace](esphome/sonoff-touch.yaml)
+- Sonoff 4CH - [konfigurace](esphome/sonoff-4ch.yaml)
 
 Seskupování v HomeAssistentovi jako v části 4 a 5.
 

@@ -5,13 +5,11 @@ esphome:
   board_flash_mode: dout
 
 wifi:
-  ssid: 'wifi'
-  password: 'wifi_heslo'
+  ssid: '<wifi_nazev>'
+  password: '<wifi_heslo>'
 
-# Enable logging
 logger:
 
-# Enable Home Assistant API
 api:
 
 ota:

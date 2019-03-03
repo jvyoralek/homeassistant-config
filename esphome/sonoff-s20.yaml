@@ -8,10 +8,8 @@ wifi:
   ssid: 'wifi'
   password: 'wifi_heslo'
 
-# Enable logging
 logger:
 
-# Enable Home Assistant API
 api:
 
 ota:

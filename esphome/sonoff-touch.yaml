@@ -1,0 +1,36 @@
+esphome:
+  name: sonoff_touch
+  platform: ESP8266
+  board: esp01_1m
+  board_flash_mode: dout  
+
+wifi:
+  ssid: '<wifi_nazev>'
+  password: '<wifi_heslo>'
+
+logger:
+
+api:
+
+ota:
+
+binary_sensor:
+  - platform: gpio
+    id: button    
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: True
+    on_press:
+      - light.toggle: light
+
+output:
+  - platform: gpio
+    id: relay
+    pin: GPIO12
+
+light:
+  - platform: binary
+    id: light
+    name: "Sonoff Touch"
+    output: relay

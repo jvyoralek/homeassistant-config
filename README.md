@@ -25,7 +25,8 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 - [Sonoff TH10](esphome/sonoff-th10.yaml) (se sensorem DS18B20, k dostání na [AliExpressu](http://s.click.aliexpress.com/e/SR7soQU)
 - [Sonoff POW R2](esphome/sonoff-pow-r2.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/eqTCSpS))
 - [Sonoff Touch](esphome/sonoff-touch.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/cMT8oOFI))
-- [Sonoff 4ch](esphome/sonoff-4ch.yaml) (k dostatní na [AliExpressu](http://s.click.aliexpress.com/e/zh7pyOy))
+- [Sonoff 4ch](esphome/sonoff-4ch.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/zh7pyOy))
+- [Wemos D1 mini](esphome/wemos-d1-mini.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bQC4hpk4)) se sensory BME280 ([AliExpress](http://%20http//s.click.aliexpress.com/e/cdOOdbeu)) a SHT31 ([AliExpress](http://s.click.aliexpress.com/e/cmg8TZtO))
 - [ZINUO Magic Home RGBW](esphome/magichome-led-rgbw.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/c7R7uLXE))
 
 ## Seriál článků na blogu popisující konfiguraci

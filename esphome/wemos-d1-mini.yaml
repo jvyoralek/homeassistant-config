@@ -1,0 +1,63 @@
+esphome:
+  name: wemos_d1
+  platform: ESP8266
+  board: d1_mini
+
+wifi:
+  ssid: '<wifi_nazev>'
+  password: '<wifi_heslo>'
+
+logger:
+
+api:
+
+ota:
+
+i2c:
+  sda: D1
+  scl: D2
+  scan: True
+
+sensor:
+  - platform: bme280
+    temperature:
+      name: "BME Teplota"
+      oversampling: 16x
+      id: bme_temp
+    pressure:
+      name: "BME Tlak"
+      id: bme_press
+    humidity:
+      name: "BME Vlhkost"
+      id: bme_humid
+    address: 0x76
+    update_interval: 60s
+
+  - platform: sht3xd
+    temperature:
+      id: sht31_temp
+      name: "SHT31 Teplota"
+    humidity:
+      id: sht31_humid
+      name: "SHT31 Vlhkost"
+    address: 0x44
+    update_interval: 60s
+
+web_server:
+  port: 80
+
+font:
+  - file: "PTM55FT.ttf"
+    id: font
+    size: 10
+
+display:
+  - platform: ssd1306_i2c
+    model: "SSD1306 128x64"
+    address: 0x3C
+    lambda: |-
+      it.printf(0, 10, id(font), "Teplota je %.1f°C", id(sht31_temp).state);
+      it.printf(0, 20, id(font), "Vlhkost je %.0f%% ", id(sht31_humid).state);
+      it.printf(0, 30, id(font), "Teplota je %.1f°C", id(bme_temp).state);
+      it.printf(0, 40, id(font), "Vlhkost je %.0f%% ", id(bme_humid).state);
+      it.printf(0, 50, id(font), "Tlak je %.1f hPa", id(bme_press).state);

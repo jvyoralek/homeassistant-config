@@ -91,6 +91,10 @@ sensor:
         - below: 1.0
           then:
             - light.turn_off: led
+  - platform: total_daily_energy
+    name: "Sonoff POW Denní spotřeba"
+    power_id: power
+    unit_of_measurement: W
 
 text_sensor:
   - platform: version

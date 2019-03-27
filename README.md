@@ -20,14 +20,15 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 
 ### EspHome (ESP2866/ESP32)
 
-- [Sonoff Basic](esphome/sonoff-basic.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bGYrG1Bi))
-- [Sonoff S20](esphome/sonoff-s20.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/cFMbMdra) nebo novější model S26 na [AliExpressu](http://s.click.aliexpress.com/e/2rfAqFa))
+- [Sonoff Basic](esphome/sonoff-basic.yaml) (k dostání na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-basic/), [Banggood](https://blog.vyoralek.cz/go/bangood-sonoff-basic/))
+- [Sonoff S20](esphome/sonoff-s20.yaml) (k dostání na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-s20/) nebo novější model S26 na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-s26/), [Banggood](https://blog.vyoralek.cz/go/bangood-sonoff-s26/))
 - [Sonoff TH10](esphome/sonoff-th10.yaml) (se sensorem DS18B20, k dostání na [AliExpressu](http://s.click.aliexpress.com/e/SR7soQU)
-- [Sonoff POW R2](esphome/sonoff-pow-r2.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/eqTCSpS))
+- [Sonoff POW R2](esphome/sonoff-pow-r2.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/eqTCSpS), [Banggood](https://blog.vyoralek.cz/go/banggood-sonoff-pow-r2/))
 - [Sonoff Touch](esphome/sonoff-touch.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/cMT8oOFI))
 - [Sonoff 4ch](esphome/sonoff-4ch.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/zh7pyOy))
-- [Wemos D1 mini](esphome/wemos-d1-mini.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bQC4hpk4)) se sensory BME280 ([AliExpress](http://%20http//s.click.aliexpress.com/e/cdOOdbeu)) a SHT31 ([AliExpress](http://s.click.aliexpress.com/e/cmg8TZtO)) a displejem SSD1306 I2C ([AliExpress](http://s.click.aliexpress.com/e/yxcX9Fi))
+- [Wemos D1 mini](esphome/wemos-d1-mini.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bQC4hpk4)) se sensory BME280 ([AliExpress](http//s.click.aliexpress.com/e/cdOOdbeu)) a SHT31 ([AliExpress](http://s.click.aliexpress.com/e/cmg8TZtO)) a displejem SSD1306 I2C ([AliExpress](http://s.click.aliexpress.com/e/yxcX9Fi))
 - [ZINUO Magic Home RGBW](esphome/magichome-led-rgbw.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/c7R7uLXE))
+- [Bliztwolf BW-SHP2](esphome/blitzwolf-shp2.yaml) (k dostaní na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-blitzwolf-bw-shp2/), [Banggood](https://blog.vyoralek.cz/go/banggood-blitzwolf-bw-shp2/))]
 
 ## Seriál článků na blogu popisující konfiguraci
 

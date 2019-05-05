@@ -121,3 +121,5 @@ Seskupování v HomeAssistentovi jako v části 4 a 5.
 ### 8. [Integrace s LED ovladačem MagicHome pomocí ESPHome](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-8-cast-led-esphome/)
 
 - Magic Home LED controller - [konfigurace](esphome/magichome-led-rgbw.yaml)
+
+### 9. [Integrace a stavba vlastní Zigbee Gateway](https://blog.vyoralek.cz/iot/vlastni-zigbee-gateway/)

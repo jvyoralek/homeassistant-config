@@ -102,6 +102,13 @@ sensor:
       unit_of_measurement: "%"
       device_class: humidity      
 
+    # zigbee2mqtt gateway - stav
+    - platform: mqtt
+      name: Bridge state
+      state_topic: "zigbee2mqtt/bridge/state"
+      icon: mdi:router-wireless        
+
+
 tts:
   platform: google
 
@@ -123,3 +130,71 @@ light:
       payload_available: "Aktivní"
       payload_not_available: "Neaktivní"
       retain: false
+
+mqtt:
+  broker: addon_core_mosquitto
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: true
+
+# zigbee2mqtt gateway - povolení párování ano/ne
+input_boolean:
+  zigbee_permit_join:
+    name: Povolit párování
+    initial: off
+    icon: mdi:cellphone-wireless
+
+# zigbee2mqtt gateway - časovač párování
+timer:
+  zigbee_permit_join:
+    name: Zbývající čas
+    duration: 600 # Updated this to the number of seconds you wish
+
+# zigbee2mqtt gateway - pomocné automatizace
+automation:
+  - id: enable_zigbee_join
+    alias: Enable Zigbee joining
+    hide_entity: true
+    trigger:
+      platform: state
+      entity_id: input_boolean.zigbee_permit_join
+      to: 'on'
+    action:
+    - service: mqtt.publish
+      data:
+        topic: zigbee2mqtt/bridge/config/permit_join
+        payload: 'true'
+    - service: timer.start
+      data:
+        entity_id: timer.zigbee_permit_join
+  - id: disable_zigbee_join
+    alias: Disable Zigbee joining
+    trigger:
+    - entity_id: input_boolean.zigbee_permit_join
+      platform: state
+      to: 'off'
+    action:
+    - data:
+        payload: 'false'
+        topic: zigbee2mqtt/bridge/config/permit_join
+      service: mqtt.publish
+    - data:
+        entity_id: timer.zigbee_permit_join
+      service: timer.cancel
+    hide_entity: true
+  - id: disable_zigbee_join_timer
+    alias: Disable Zigbee joining by timer
+    hide_entity: true
+    trigger:
+    - platform: event
+      event_type: timer.finished
+      event_data:
+        entity_id: timer.zigbee_permit_join
+    action:
+    - service: mqtt.publish
+      data:
+        topic: zigbee2mqtt/bridge/config/permit_join
+        payload: 'false'
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.zigbee_permit_join

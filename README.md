@@ -122,4 +122,6 @@ Seskupování v HomeAssistentovi jako v části 4 a 5.
 
 - Magic Home LED controller - [konfigurace](esphome/magichome-led-rgbw.yaml)
 
-### 9. [Integrace a stavba vlastní Zigbee Gateway](https://blog.vyoralek.cz/iot/vlastni-zigbee-gateway/)
+### 9. [Integrace Zigbee s Xiaomi Gateway](https://blog.vyoralek.cz/iot/centrum-chytre-domacnosti-homeassistant-hass-io-9-cast-integrace-zigbee-xiaomi-mijia-a-aqara/)
+
+### 10. [Integrace a stavba vlastní Zigbee Gateway](https://blog.vyoralek.cz/iot/vlastni-zigbee-gateway/)

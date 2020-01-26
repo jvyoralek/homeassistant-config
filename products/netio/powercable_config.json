@@ -1,0 +1,122 @@
+{
+    "config": {
+        "broker": {
+            "url": "<MQTT_SERVER_IP>",
+            "protocol": "mqtt",
+            "port": 1883,
+            "ssl": false,
+            "type": "generic",
+            "username": "<MQTT_USER>",
+            "password": "<MQTT_PASSWORD>",
+            "keepalive": 30
+        },
+        "subscribe": [{
+            "topic": "netio_${DEVICE_NAME}/cmnd/POWER",
+            "qos": 0,
+            "target": "OUTPUTS/1/ACTION",
+            "action": "${payload}"
+        }],
+        "publish": [{
+                "topic": "netio_${DEVICE_NAME}/stat/POWER",
+                "qos": 0,
+                "retain": true,
+                "payload": "${OUTPUTS/1/STATE}",
+                "events": [{
+                        "type": "change",
+                        "source": "OUTPUTS/1/STATE"
+                    },
+                    {
+                        "type": "timer",
+                        "period": 900
+                    }
+                ]
+            },
+            {
+                "topic": "netio_${DEVICE_NAME}/tele/SENSOR/Voltage",
+                "qos": 0,
+                "retain": false,
+                "payload": "${OUTPUTS/1/VOLTAGE}",
+                "events": [{
+                        "type": "timer",
+                        "period": 300
+                    },
+                    {
+                        "type": "delta",
+                        "source": "OUTPUTS/1/VOLTAGE",
+                        "delta": 1
+                    }
+                ]
+            },
+            {
+                "topic": "netio_${DEVICE_NAME}/tele/SENSOR/Current",
+                "qos": 0,
+                "retain": false,
+                "payload": "${OUTPUTS/1/CURRENT}",
+                "events": [{
+                    "type": "timer",
+                    "period": 300
+                }, {
+                    "type": "delta",
+                    "source": "OUTPUTS/1/CURRENT",
+                    "delta": 50
+                }]
+            },
+            {
+                "topic": "netio_${DEVICE_NAME}/tele/SENSOR/Power",
+                "qos": 0,
+                "retain": false,
+                "payload": "${OUTPUTS/1/LOAD}",
+                "events": [{
+                    "type": "timer",
+                    "period": 300
+                }, {
+                    "type": "delta",
+                    "source": "OUTPUTS/1/LOAD",
+                    "delta": 10
+                }]
+            },
+            {
+                "topic": "netio_${DEVICE_NAME}/tele/SENSOR/Energy",
+                "qos": 0,
+                "retain": false,
+                "payload": "${OUTPUTS/1/ENERGY}",
+                "events": [{
+                    "type": "timer",
+                    "period": 900
+                }, {
+                    "type": "delta",
+                    "source": "OUTPUTS/1/ENERGY",
+                    "delta": 1
+                }]
+            },
+            {
+                "topic": "netio_${DEVICE_NAME}/tele/SENSOR/Factor",
+                "qos": 0,
+                "retain": false,
+                "payload": "${OUTPUTS/1/POWER_FACTOR}",
+                "events": [{
+                    "type": "timer",
+                    "period": 900
+                }, {
+                    "type": "delta",
+                    "source": "OUTPUTS/1/POWER_FACTOR",
+                    "delta": 0.02
+                }]
+            },
+            {
+                "topic": "netio_${DEVICE_NAME}/tele/SENSOR/Frequency",
+                "qos": 0,
+                "retain": false,
+                "payload": "${OUTPUTS/1/FREQUENCY}",
+                "events": [{
+                    "type": "timer",
+                    "period": 3600
+                }, {
+                    "type": "delta",
+                    "source": "OUTPUTS/1/FREQUENCY",
+                    "delta": 0.1
+                }]
+            }
+        ]
+    }
+}

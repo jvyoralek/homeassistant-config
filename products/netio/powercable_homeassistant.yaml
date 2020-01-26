@@ -1,0 +1,34 @@
+switch:
+  - platform: mqtt
+    name: "Netio PowerCable"
+    state_topic: "netio_PowerCable-9C/stat/POWER"
+    command_topic: "netio_PowerCable-9C/cmnd/POWER"
+    payload_on: 1
+    payload_off: 0
+    qos: 0
+    retain: true
+
+sensor:
+  - platform: mqtt
+    name: "Netio PowerCable - proud"
+    state_topic: "netio_PowerCable-9C/tele/SENSOR/Current"
+    unit_of_measurement: "mA"    
+  - platform: mqtt
+    name: "Netio PowerCable - výkon"
+    state_topic: "netio_PowerCable-9C/tele/SENSOR/Power"
+    unit_of_measurement: "W"
+  - platform: mqtt
+    name: "Netio PowerCable - napětí"
+    state_topic: "netio_PowerCable-9C/tele/SENSOR/Voltage"             
+    unit_of_measurement: "V"    
+  - platform: mqtt
+    name: "Netio PowerCable - spotřeba"
+    state_topic: "netio_PowerCable-9C/tele/SENSOR/Energy"
+    unit_of_measurement: "Wh"
+  - platform: mqtt
+    name: "Netio PowerCable - faktor"
+    state_topic: "netio_PowerCable-9C/tele/SENSOR/Factor"        
+  - platform: mqtt
+    name: "Netio PowerCable - frekvence"
+    state_topic: "netio_PowerCable-9C/tele/SENSOR/Frequency"     
+    unit_of_measurement: "Hz"          

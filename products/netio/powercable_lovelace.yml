@@ -1,0 +1,15 @@
+---
+id: netio
+title: Netio
+cards:
+  - type: entities
+    title: Netio zásuvka
+    entities:
+      - entity: switch.netio_powercable
+      - entity: sensor.netio_powercable_faktor
+      - entity: sensor.netio_powercable_frekvence
+      - entity: sensor.netio_powercable_napeti
+      - entity: sensor.netio_powercable_proud
+      - entity: sensor.netio_powercable_spotreba     
+      - entity: sensor.netio_powercable_vykon     
+    show_header_toggle: false

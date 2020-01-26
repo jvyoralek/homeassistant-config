@@ -18,6 +18,10 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 - security.yaml - není obsažen v tomto repozitáři. Zde ukládejte své hesla a vaše soukromé nastavení
 - [group.yaml](home-assistant/group.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
 
+#### Produkty Netio (www.netio-products.com)
+- [powercable_homeassistant.yaml](products/netio/powercable_homeassistant.yaml) - HomeAssistant entity pro PowerCable MQTT
+- [powercable_homeassistant.yaml](products/netio/powercable_lovelace.yaml) - HomeAssistant lovelace pro PowerCable MQTT
+
 ### EspHome (ESP2866/ESP32)
 
 - [Sonoff Basic](esphome/sonoff-basic.yaml) (k dostání na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-basic/), [Banggood](https://blog.vyoralek.cz/go/bangood-sonoff-basic/))

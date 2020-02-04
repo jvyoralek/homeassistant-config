@@ -1,11 +1,11 @@
 substitutions:
   # Nahradte pozadovanym nazvem pro zasuvku
-  plug_name: blitzwolf01
+  plug_name: blitzwolf02
   # Vyssi hodnota snizuje vystupni hodnotu ve Wattech
-  current_res: "0.0028"
+  current_res: "0.00290"
   # Nizsi hodnota snizuje vystupni hodnotu ve Voltech
-  voltage_div: "960"
-
+  voltage_div: "940"
+  
 esphome:
   name: ${plug_name}
   platform: ESP8266
@@ -23,14 +23,14 @@ web_server:
 api:
 
 ota:
-
+    
 binary_sensor:
   - platform: gpio
     id: button
     pin:
-      number: GPIO3
+      number: GPIO13
       inverted: True
-    name: "${plug_name}_button"      
+    name: "${plug_name}_button"
     on_press:
       - switch.toggle: fakebutton
 
@@ -48,13 +48,13 @@ switch:
     - light.turn_off: led
   - platform: gpio
     id: relay
-    pin: GPIO14
+    pin: GPIO15
 
 output:
   - platform: esp8266_pwm
     id: pow_blue_led
     pin:
-      number: GPIO1
+      number: GPIO00
       inverted: True
 
 light:
@@ -68,13 +68,13 @@ sensor:
     update_interval: 60s
   - platform: uptime
     name: "${plug_name}_uptime"
-    icon: mdi:clock-outline
+    icon: mdi:clock-outline    
   - platform: hlw8012
     sel_pin:
       number: GPIO12
       inverted: True
-    cf_pin: GPIO04
-    cf1_pin: GPIO05
+    cf_pin: GPIO05
+    cf1_pin: GPIO14
     current_resistor: ${current_res}
     voltage_divider: ${voltage_div}
     current:
@@ -101,13 +101,15 @@ sensor:
         - multiply: 0.001
     unit_of_measurement: kWh
     icon: mdi:clock-alert  
-
+ 
 text_sensor:
   - platform: version
     name: "${plug_name} Verze firmware"
 
 status_led:
-  pin: GPIO13
+  pin:
+    number: GPIO02
+    inverted: True
 
 time:
   - platform: sntp

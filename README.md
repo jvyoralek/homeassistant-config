@@ -33,7 +33,7 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 - [Wemos D1 mini](esphome/wemos-d1-mini.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bQC4hpk4)) se sensory BME280 ([AliExpress](http//s.click.aliexpress.com/e/cdOOdbeu)) a SHT31 ([AliExpress](http://s.click.aliexpress.com/e/cmg8TZtO)) a displejem SSD1306 I2C ([AliExpress](http://s.click.aliexpress.com/e/yxcX9Fi))
 - [ZINUO Magic Home RGBW](esphome/magichome-led-rgbw.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/c7R7uLXE))
 - [Bliztwolf BW-SHP2](esphome/blitzwolf-shp2.yaml) (k dostaní na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-blitzwolf-bw-shp2/), [Banggood](https://blog.vyoralek.cz/go/banggood-blitzwolf-bw-shp2/))]
-- [Bliztwolf BW-SHP6](esphome/blitzwolf-shp6.yaml) (k dostaní na [AliExpressu](http://s.click.aliexpress.com/e/cciBF7dQ/), [Banggood](https://www.banggood.com/custlink/vvDmRJLOU6))]
+- [Bliztwolf BW-SHP6](esphome/blitzwolf-shp6.yaml) (k dostaní na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-blitzwolf-shp6/), [Banggood](https://blog.vyoralek.cz/go/banggood-blitzwolf-bw-shp6/))]
 
 ## Seriál článků na blogu popisující konfiguraci
 

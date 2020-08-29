@@ -7,8 +7,6 @@ homeassistant:
   time_zone: Europe/Prague
   customize: !include customize.yaml
 
-frontend:
-
 config:
 
 http:
@@ -18,14 +16,10 @@ http:
   # base_url: example.duckdns.org:8123
 
 # Checks for available updates
-updater:
-  include_used_components: true
 
 discovery:
   ignore:
   - google_cast
-
-conversation:
 
 history:
   exclude:
@@ -114,9 +108,8 @@ tts:
 
 group: !include groups.yaml
 
-homekit:
-  # nepovinné - pouze pokud provozuje více HomeAssistentů
-  name: Homekit Bridge
+# Možné nastavit pomocí UI
+# homekit:
 
 light:
     - platform: mqtt
@@ -150,51 +143,4 @@ timer:
     name: Zbývající čas
     duration: 600 # Updated this to the number of seconds you wish
 
-# zigbee2mqtt gateway - pomocné automatizace
-automation:
-  - id: enable_zigbee_join
-    alias: Enable Zigbee joining
-    hide_entity: true
-    trigger:
-      platform: state
-      entity_id: input_boolean.zigbee_permit_join
-      to: 'on'
-    action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/bridge/config/permit_join
-        payload: 'true'
-    - service: timer.start
-      data:
-        entity_id: timer.zigbee_permit_join
-  - id: disable_zigbee_join
-    alias: Disable Zigbee joining
-    trigger:
-    - entity_id: input_boolean.zigbee_permit_join
-      platform: state
-      to: 'off'
-    action:
-    - data:
-        payload: 'false'
-        topic: zigbee2mqtt/bridge/config/permit_join
-      service: mqtt.publish
-    - data:
-        entity_id: timer.zigbee_permit_join
-      service: timer.cancel
-    hide_entity: true
-  - id: disable_zigbee_join_timer
-    alias: Disable Zigbee joining by timer
-    hide_entity: true
-    trigger:
-    - platform: event
-      event_type: timer.finished
-      event_data:
-        entity_id: timer.zigbee_permit_join
-    action:
-    - service: mqtt.publish
-      data:
-        topic: zigbee2mqtt/bridge/config/permit_join
-        payload: 'false'
-    - service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.zigbee_permit_join
+automation: !include automations.yaml

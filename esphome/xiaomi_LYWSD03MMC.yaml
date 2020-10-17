@@ -1,0 +1,32 @@
+esphome:
+  name: bl_gw_01
+  platform: ESP32
+  board: esp32doit-devkit-v1
+
+wifi:
+  ssid: !secret wifi_name
+  password: !secret wifi_password
+
+esp32_ble_tracker:
+
+sensor:
+  - platform: xiaomi_lywsd03mmc
+    mac_address: "A4:C1:38:A1:06:D8"
+    bindkey: !secret bl_temp_humidity_square2_bind_key
+    temperature:
+      name: "LYWSD03MMC Temperature"
+    humidity:
+      name: "LYWSD03MMC Humidity"
+    battery_level:
+      name: "LYWSD03MMC Battery Level"
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+web_server:
+  port: 80       

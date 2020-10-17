@@ -1,0 +1,33 @@
+esphome:
+  name: bl_gw_01
+  platform: ESP32
+  board: esp32doit-devkit-v1
+
+wifi:
+  ssid: !secret wifi_name
+  password: !secret wifi_password
+
+esp32_ble_tracker:
+
+sensor:    
+  - platform: xiaomi_hhccjcy01
+    mac_address: '<nahradte mac adresou zarizeni>'
+    temperature:
+      name: "Xiaomi MiFlora Temperature"
+    moisture:
+      name: "Xiaomi MiFlora Moisture"
+    illuminance:
+      name: "Xiaomi MiFlora Illuminance"
+    conductivity:
+      name: "Xiaomi MiFlora Soil Conductivity"        
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+
+web_server:
+  port: 80       

@@ -10,15 +10,14 @@ wifi:
 esp32_ble_tracker:
 
 sensor:
-  - platform: xiaomi_lywsd03mmc
-    mac_address: "<nahradte mac adresou zarizeni>"
-    bindkey: !secret bl_temp_humidity_square2_bind_key
+  - platform: xiaomi_lywsdcgq
+    mac_address: '<nahradte mac adresou zarizeni>'
     temperature:
-      name: "LYWSD03MMC Temperature"
+      name: "Xiaomi x Temperature"
     humidity:
-      name: "LYWSD03MMC Humidity"
+      name: "Xiaomi LYWSDCGQ Humidity"
     battery_level:
-      name: "LYWSD03MMC Battery Level"
+      name: "Xiaomi LYWSDCGQ Battery Level"      
 
 # Enable logging
 logger:

@@ -3,7 +3,7 @@ import json
 import re
 
 url = urlopen("https://raw.githubusercontent.com/Templarian/MaterialDesign/master/meta.json")
-meta = [(i['name'], i['codepoint']) for i in json.loads(url.read()) if re.search('^weather-', i['name'])]
+meta = [('mdi-'+i['name'], i['codepoint']) for i in json.loads(url.read()) if re.search('^weather-', i['name'])]
 
 print('''---
 esphome:

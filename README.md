@@ -19,12 +19,14 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 - [group.yaml](home-assistant/group.yaml) - seskupování prvků do skupin použité v uživatelském rozhraní
 
 #### Produkty Netio (www.netio-products.com)
+
 - [powercable_homeassistant.yaml](products/netio/powercable_homeassistant.yaml) - HomeAssistant entity pro PowerCable MQTT
 - [powercable_homeassistant.yaml](products/netio/powercable_lovelace.yaml) - HomeAssistant lovelace pro PowerCable MQTT
 
 ### EspHome (ESP2866/ESP32)
 
 #### Sonoff
+
 - [Sonoff Basic](esphome/sonoff-basic.yaml) (k dostání na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-basic/), [Banggood](https://blog.vyoralek.cz/go/bangood-sonoff-basic/))
 - [Sonoff S20](esphome/sonoff-s20.yaml) (k dostání na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-s20/) nebo novější model S26 na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-sonoff-s26/), [Banggood](https://blog.vyoralek.cz/go/bangood-sonoff-s26/))
 - [Sonoff TH10](esphome/sonoff-th10.yaml) (se sensorem DS18B20, k dostání na [AliExpressu](http://s.click.aliexpress.com/e/SR7soQU)
@@ -33,15 +35,19 @@ Home-Assistant (Hass.io) mám nainstalovaný na [NanoPi M4](http://s.click.aliex
 - [Sonoff 4ch](esphome/sonoff-4ch.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/zh7pyOy))
 
 #### Blitzwolf
+
 - [Bliztwolf BW-SHP2](esphome/blitzwolf-shp2.yaml) (k dostaní na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-blitzwolf-bw-shp2/), [Banggood](https://blog.vyoralek.cz/go/banggood-blitzwolf-bw-shp2/))]
 - [Bliztwolf BW-SHP6](esphome/blitzwolf-shp6.yaml) (k dostaní na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-blitzwolf-shp6/), [Banggood](https://blog.vyoralek.cz/go/banggood-blitzwolf-bw-shp6/))]
 
 #### Xiaomi (Bluetooth produkty)
+
 - [Xiaomi Mijia LYWSD03MMC](esphome/xiaomi_LYWSD03MMC.yaml) (k dostaní na [AliExpressu](https://blog.vyoralek.cz/go/aliexpress-mijia-bluetooth-temperature-humidity-sensor-2-lywsd03mmc/), [Amazon.de](https://blog.vyoralek.cz/go/amazon-de-mijia-bluetooth-temperature-humidity-sensor-2-lywsd03mmc/))
 
 #### Ostatní
+
 - [Wemos D1 mini](esphome/wemos-d1-mini.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/bQC4hpk4)) se sensory BME280 ([AliExpress](http//s.click.aliexpress.com/e/cdOOdbeu)) a SHT31 ([AliExpress](http://s.click.aliexpress.com/e/cmg8TZtO)) a displejem SSD1306 I2C ([AliExpress](http://s.click.aliexpress.com/e/yxcX9Fi))
 - [ZINUO Magic Home RGBW](esphome/magichome-led-rgbw.yaml) (k dostání na [AliExpressu](http://s.click.aliexpress.com/e/c7R7uLXE))
+- [ESPHome Bluetooth Proxy](esphome/bluetooth-proxy.yaml) (více v článku [Bluetooth zařízení a ESPHome proxy](https://blog.vyoralek.cz/iot/homeassistant-24-bluetooth-zarizeni-a-esphome-proxy/))
 
 ## Seriál článků na blogu popisující konfiguraci
 

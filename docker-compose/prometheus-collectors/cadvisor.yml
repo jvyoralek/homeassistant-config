@@ -6,6 +6,11 @@ services:
     # TODO: stitek latest neni aktualizovany, kouknete sem na posledni verzi https://github.com/google/cadvisor/releases 
     image: gcr.io/cadvisor/cadvisor:v0.46.0     
     container_name: cadvisor
+    # (Optional) If you need to change port
+    # environment:
+    #   - CADVISOR_HEALTHCHECK_URL=http://localhost:8088/health  
+    # command:
+    #  - '-port=8088'       
     ports:
       - "8080:8080"
     volumes:
@@ -19,6 +24,7 @@ services:
       - /dev/kmsg
     restart: unless-stopped
     privileged: true
+    
 
 # Chyba: Failed to get system UUID: open /etc/machine-id: no such file or directory
 # Reseni: Spusteni příkazu "dbus-uuidgen --ensure"
